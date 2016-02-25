@@ -1,0 +1,20 @@
+{
+  "name": "job-finder",
+  "version": "1.0.0",
+  "homepage": "https://github.com/rafaell-lycan/curso-angular",
+  "authors": [
+    "Rafaell Lycan <sonny.webdsg@gmail.com>"
+  ],
+  "description": "A simple app to show jobs",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6"
+  }
+}

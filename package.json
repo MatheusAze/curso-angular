@@ -1,0 +1,7 @@
+{
+  "name": "job-finder",
+  "version": "1.0.0",
+  "description": "A simple app to show jobs",
+  "author": "Rafaell Lycan <sonny.webdsg@gmail.com>",
+  "license": "MIT"
+}

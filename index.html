@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jobs Finder</title>
+  <link rel="stylesheet" href="src/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Roboto+Slab:400,700">
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+
+  <header class="header home-header text-center">
+  <div class="container">
+    <h1 class="text-center"><a href="index.html">Job Finder</a></h1>
+    <h2 class="text-center">Slogan goes here!</h2>
+    <a href="#" class="btn btn-default">Post a job!</a>
+  </div>
+</header>
+
+<section class="filters home-filters hidden-xs ">
+  <div class="container">
+    <div class="col-sm-3 filter-label">
+      <h4>Estou procurando:</h4>
+    </div>
+    <div class="col-sm-9 filter-list">
+      <ul>
+        <li class="col-sm-3 item">
+          <input type="checkbox" name="fullTime" id="fullTime"> <label for="fullTime">Full Time</label>
+        </li>
+        <li class="col-sm-3 item">
+          <input type="checkbox" name="estagio" id="estagio"> <label for="estagio">Estágio</label>
+        </li>
+        <li class="col-sm-3 item">
+          <input type="checkbox" name="freela" id="freela"> <label for="freela">Freela</label>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="tag-filters hidden-xs">
+  <div class="container">
+    <div class="col-sm-12 active-filters">
+      <ul class="default-list tag-list">
+        <li class="tag">
+          <a href="#">Tag Name | x</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="latest-jobs">
+  <div class="container">
+    <div class="col-sm-12 jobs-label">
+      <h3>Latest Jobs</h3>
+    </div>
+
+    <div class="jobs-list">
+     <ul>
+        <li class="col-xs-12 item">
+
+          <div class="col-sm-1 hidden-xs logo">
+            <img src="http://placehold.it/100" alt="Company Name">
+            <p class="hidden">O</p>
+          </div>
+
+          <div class="col-sm-4 col-xs-7 info">
+            <h4>Job Name</h4>
+            Company Name
+          </div>
+
+          <div class="col-sm-4 hidden-xs tags">
+            <ul class="default-list tag-list">
+              <li class="tag">
+                <a href="#">Tag name</a>
+              </li>
+              <li class="tag">
+                <a href="#">Tag name</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-sm-2 col-xs-3 place">
+            <h4>JOB TYPE</h4>
+            <span class="glyphicon glyphicon-globe"></span> Job Location
+          </div>
+
+          <div class="col-sm-1 col-xs-2 date text-center">
+            NOV<br>
+            3
+          </div>
+       </li>
+      </ul>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <a href="#" class="btn btn-primary">Load more</a>
+
+  </div>
+</section>
+
+
+  <script src="app/js/app.min.js"></script>
+</body>
+</html>
