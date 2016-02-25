@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 <head>
   <meta charset="UTF-8">
   <title>Jobs Finder</title>
@@ -7,13 +7,13 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Roboto+Slab:400,700">
   <link rel="stylesheet" href="src/css/style.css">
 </head>
-<body>
+<body ng-controller="homeController as vm">
 
-  <header class="header home-header text-center">
+<header class="header home-header text-center">
   <div class="container">
-    <h1 class="text-center"><a href="index.html">Job Finder</a></h1>
+    <h1 class="text-center"><a href="index.html">{{'Olá ' +  vm.count}}</a></h1>
     <h2 class="text-center">Slogan goes here!</h2>
-    <a href="#" class="btn btn-default">Post a job!</a>
+    <a href="#" class="btn btn-default" ng-click="vm.increment()">Post a job!</a>
   </div>
 </header>
 
@@ -58,37 +58,37 @@
 
     <div class="jobs-list">
      <ul>
-        <li class="col-xs-12 item">
+        <li class="col-xs-12 item" ng-repeat="job in vm.jobs" ng-if="vm.jobs && vm.jobs.hasItems">
 
           <div class="col-sm-1 hidden-xs logo">
-            <img src="http://placehold.it/100" alt="Company Name">
-            <p class="hidden">O</p>
+            <img 
+              ng-src="{{job._company.companyLogo}}" 
+              alt="{{job._company.name}}"
+              ng-if="job._company.companyLogo">
+            <p ng-if="!job._company.companyLogo">O</p>
           </div>
 
           <div class="col-sm-4 col-xs-7 info">
-            <h4>Job Name</h4>
-            Company Name
+            <h4>{{job.name}}</h4>
+            {{job._company.name}}
           </div>
 
           <div class="col-sm-4 hidden-xs tags">
             <ul class="default-list tag-list">
-              <li class="tag">
-                <a href="#">Tag name</a>
-              </li>
-              <li class="tag">
-                <a href="#">Tag name</a>
+              <li class="tag" ng-repeat="tag in job.tags">
+                <a href="#">{{tag}}</a>
               </li>
             </ul>
           </div>
 
           <div class="col-sm-2 col-xs-3 place">
-            <h4>JOB TYPE</h4>
-            <span class="glyphicon glyphicon-globe"></span> Job Location
+            <h4>{{job.type}}</h4>
+            <span class="glyphicon glyphicon-globe"></span> {{job.location}}
           </div>
 
           <div class="col-sm-1 col-xs-2 date text-center">
-            NOV<br>
-            3
+            {{job.createdAt | date : 'MMM' | uppercase}}<br>
+            {{job.createdAt | date : 'd'}}
           </div>
        </li>
       </ul>
@@ -102,6 +102,8 @@
 </section>
 
 
-  <script src="app/js/app.min.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="src/js/app.js"></script>
+  <script src="src/js/home/homeController.js"></script>
 </body>
 </html>
