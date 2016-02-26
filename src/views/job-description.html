@@ -1,0 +1,13 @@
+  <div class="container">
+  <header>
+    <h1>{{vm.job.name}}</h1>
+    <span class="createdAt">{{vm.job.createdAt | date : 'dd/MM/yyyy' | uppercase}}</span>
+    <h2>{{vm.job._company.name}}</h2>
+    <h3>{{vm.job.location}} <span>| Remove OK</span></h3>
+
+    <p><a href="{{vm.job._company.website}}" target="_blank" ng-if="vm.job._company.website">{{vm.job._company.website}}</a></p>
+  </header>
+
+{{vm.job.description}}
+
+</div>
