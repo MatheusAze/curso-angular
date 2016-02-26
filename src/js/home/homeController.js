@@ -7,19 +7,14 @@
 
 	function homeController($http){
 		var vm = this;
-		vm.count = 0;
 
 		$http.get('http://10.0.1.193:3000/api/jobs')
-			.success(function(data) {
-				console.log('-> ', data)
-			})
-			.error(function (err) {
-				 console.error(err) ;
-			});
-
-		vm.increment = function() {
-			vm.count++;
-		};
+			 .then(function(response) {
+			    vm.jobs = response.data.items;
+			 })
+			 .then(function (data) {
+				console.log('Segunda req: ', data) ;
+		 	 });
 
 	}
 

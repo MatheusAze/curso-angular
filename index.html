@@ -11,7 +11,7 @@
 
 <header class="header home-header text-center">
   <div class="container">
-    <h1 class="text-center"><a href="index.html">{{'Olá ' +  vm.count}}</a></h1>
+    <h1 class="text-center"><a href="index.html">Job Finder</a></h1>
     <h2 class="text-center">Slogan goes here!</h2>
     <a href="#" class="btn btn-default" ng-click="vm.increment()">Post a job!</a>
   </div>
@@ -58,7 +58,7 @@
 
     <div class="jobs-list">
      <ul>
-        <li class="col-xs-12 item" ng-repeat="job in vm.jobs" ng-if="vm.jobs && vm.jobs.hasItems">
+        <li class="col-xs-12 item" ng-repeat="job in vm.jobs" ng-if="vm.jobs && vm.jobs.length">
 
           <div class="col-sm-1 hidden-xs logo">
             <img 
