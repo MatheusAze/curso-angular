@@ -59,7 +59,7 @@
 
           <div class="col-sm-4 col-xs-7 info">
             <h4><a ng-href="{{ '#/jobs/' + job._id }}">{{job.name}}</a></h4>
-            {{job._company.name}}
+            <a ng-href="{{ '#/companies/' + job._company._id }}">{{job._company.name}}</a>
           </div>
 
           <div class="col-sm-4 hidden-xs tags">

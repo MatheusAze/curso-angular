@@ -14,11 +14,17 @@
 				controller: 'homeController',
 				controllerAs: 'vm'
 			})
-			.when('/jobs/:id', {
+			.when('/jobs/:id/', {
 				templateUrl: 'src/views/job-description.html',
 				controller: 'jobsController',
 				controllerAs: 'vm'
 			})
+			.when('/companies/:id/', {
+				templateUrl: 'src/views/company.html',
+				controller: 'companyController',
+				controllerAs: 'vm'
+			})
+
 			.otherwise({
 				redirectTo: '/'
 			});
